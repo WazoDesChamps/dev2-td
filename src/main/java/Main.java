@@ -8,7 +8,7 @@ public class Main {
         medor.run();
         medor.eat();
         medor.run();
-        medor.run();
 
     }
+
 }

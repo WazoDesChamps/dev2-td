@@ -23,6 +23,10 @@ public class Contact {
         return firstName;
     }
 
+    public String getFullName(){
+        return this.firstName + this.name;
+    }
+
     public String getAdress() {
         return adress;
     }

@@ -61,6 +61,12 @@ class DogTest {
         assertFalse(dog.isHungry());
     }
 
-
+    @Test
+    void run_when_hungry_does_not_run_ISE(){
+        Dog dog = new Dog("chien", 10);
+        dog.run();
+        assertTrue(dog.isHungry());
+        assertThrows(IllegalStateException.class, () -> dog.run());
+    }
 
 }

@@ -1,3 +1,5 @@
+package Intro;
+
 public class Contact {
     String name;
     String firstName;
@@ -24,7 +26,7 @@ public class Contact {
     }
 
     public String getFullName(){
-        return this.firstName + this.name;
+        return this.firstName + " " + this.name;
     }
 
     public String getAdress() {

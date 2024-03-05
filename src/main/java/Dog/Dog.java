@@ -98,8 +98,10 @@ public class Dog {
     boolean isWeightBetween(int nb1, int nb2) {
         if (nb1 <= nb2) {
             return this.weight >= nb1 && nb2 >= this.weight;
+        } else if (nb1 >= nb2) {
+            return this.weight >= nb2 && nb1 >= this.weight;
         }
-        return this.weight >= nb1 || nb2 <= this.weight;
+        return this.weight >= nb1 ^ nb2 <= this.weight;
     }
 
 

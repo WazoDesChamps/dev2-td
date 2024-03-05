@@ -85,7 +85,22 @@ public class Dog {
         else{
             return "WOUUUUF";
         }
-
     }
+
+    /**
+     * Check if weight is between nb1 and nb2.
+     * If nb1 > nb2, it checks if weight is between nb2 and nb1.
+     *
+     * @param nb1 defines one end of the interval.
+     * @param nb2 defines the other end of the interval.
+     * @return true if dog's weight is between min(nb1, nb2) and max(nb2, nb1) (both included).
+     */
+    boolean isWeightBetween(int nb1, int nb2) {
+        if (nb1 <= nb2) {
+            return this.weight >= nb1 && nb2 >= this.weight;
+        }
+        return this.weight >= nb1 || nb2 <= this.weight;
+    }
+
 
 }

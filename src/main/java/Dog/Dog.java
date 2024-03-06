@@ -7,18 +7,16 @@ import java.util.Random;
  * @author Arthur
  */
 public class Dog {
-    String name;
-    int weight;
-    boolean hungry;
-    boolean injured;
-
     Random rand = new Random();
 
+    private String name;
+    private int weight;
+    private boolean hungry = false;
+    private boolean injured= false;
+
     Dog(String name, int weight){
-        this.name = name;
-        this.weight = weight;
-        boolean hungry = false;
-        boolean injured = false;
+        setName(name);
+        setWeight(weight);
     }
 
     public boolean isHungry() {
@@ -105,4 +103,26 @@ public class Dog {
     }
 
 
+    public void setWeight(int weight) {
+        if (weight <= 0){
+            throw new IllegalStateException("Le poids doit être un entier positif !");
+        }
+        this.weight = weight;
+    }
+
+    public void setHungry(boolean hungry) {
+        this.hungry = hungry;
+    }
+
+    public void setInjured(boolean injured) {
+        this.injured = injured;
+    }
+
+    public void setName(String name) {
+        if (name.length() <= 2 || name.length() >= 30){
+            throw new IllegalStateException("Le nom d’un chien doit\n" +
+                    "toujours comporter entre 2 et 30 caractères");
+        }
+        this.name = name;
+    }
 }

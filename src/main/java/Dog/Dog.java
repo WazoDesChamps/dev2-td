@@ -12,7 +12,7 @@ public class Dog {
     private String name;
     private int weight;
     private boolean hungry = false;
-    private boolean injured= false;
+    boolean injured= false;
 
     Dog(String name, int weight){
         setName(name);
@@ -54,6 +54,7 @@ public class Dog {
     }
 
     public boolean eat(){
+        setWeight(weight + 1);
         if (this.hungry == false){
             throw new IllegalStateException(this.name + " n'a plus faim");
         }
@@ -119,10 +120,18 @@ public class Dog {
     }
 
     public void setName(String name) {
-        if (name.length() <= 2 || name.length() >= 30){
+        if (name.length() < 2 || name.length() > 30){
             throw new IllegalStateException("Le nom d’un chien doit\n" +
                     "toujours comporter entre 2 et 30 caractères");
         }
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 }

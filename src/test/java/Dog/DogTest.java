@@ -2,6 +2,7 @@ package Dog;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
 class DogTest {
     @Test
     void sound_weight_9_is_small() {

@@ -10,14 +10,19 @@ public class Phonebook {
         this.contacts = new ArrayList<>();
     }
 
-    void add(Contact c){
+    public void add(Contact c){
         this.contacts.add(c);
     }
 
-    void display(){
+    public void display(){
         for(Contact c : this.contacts){
             System.out.println(c.getFullName() + " " + c.getPhone() + " " + c.getAdress());
         }
+    }
+
+    public void update(int numContact, String adresse, int phone){
+        this.contacts.get(numContact).setAdress(adresse);
+        this.contacts.get(numContact).setPhone(phone);
     }
 
 }

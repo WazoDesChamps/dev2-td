@@ -25,4 +25,9 @@ public class Phonebook {
         this.contacts.get(numContact).setPhone(phone);
     }
 
+    public void merge(Phonebook pb){
+        for(Contact c: contacts){
+            pb.add(c);
+        }
+    }
 }

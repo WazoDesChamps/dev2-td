@@ -55,14 +55,11 @@ public class Dog {
 
     public boolean eat(){
         setWeight(weight + 1);
-        if (this.hungry == false){
-            throw new IllegalStateException(this.name + " n'a plus faim");
+        if (this.hungry){
+            this.hungry = false;
+            return true;
         }
-        if (this.injured == true){
-            System.out.println(this.name + " est rétabli !");
-            this.injured = false;
-        }
-        return this.hungry = false;
+        return this.hungry;
     }
 
     void bark(int nbRepeat){

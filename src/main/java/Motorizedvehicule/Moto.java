@@ -7,11 +7,7 @@ public class Moto extends Véhicule{
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "brand='" + brand + '\'' +
-                ", maxTank=" + maxTank +
-                ", tank=" + tank +
-                '}';
+        return "Brand: " + brand + ", Tank Capacity: " + maxTank + ", Current Fuel: " + tank;
     }
 
     public static void main(String[] args) {

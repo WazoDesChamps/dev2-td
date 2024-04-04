@@ -3,15 +3,15 @@ package Motorizedvehicule;
 import java.util.Objects;
 
 public class Véhicule {
-    String brand;
-    double maxTank;
-    double tank;
+    protected String brand;
+    protected double maxTank;
+    protected double tank;
 
 
     public Véhicule(String brand, double maxTank, double tank) {
         this.brand = brand;
         this.maxTank = maxTank;
-        this.tank = maxTank;
+        this.tank = tank;
     }
 
     public void fillUpGaz(){
@@ -19,13 +19,14 @@ public class Véhicule {
     }
 
     public void ride(int distance){
-        System.out.printf("Je roule sur", distance," km");
+        System.out.println(this.brand + " roule sur: " + distance + " km");
         for (int i = 0; i < distance; i++){
             this.tank = this.tank - 0.1;
-            if (this.tank == 0){
-                System.out.printf("Je suis en panne sèche.");
+            if (this.tank <= 0){
+                System.out.println("Je suis en panne sèche.");
             }
         }
+        System.out.println();
     }
 
     //Poser la question, si il faut modifier quelque chose ?

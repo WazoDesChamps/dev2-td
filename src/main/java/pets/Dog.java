@@ -18,7 +18,7 @@ public class Dog extends Animal{
         return hungry;
     }
 
-    void bark(){
+    public void bark(){
         if (this.weight > 30){
             System.out.println(this.name + "WOUUUUF");
         }
@@ -37,6 +37,11 @@ public class Dog extends Animal{
         for (int i = 0; i < nbRepeat; i++){
             bark();
         }
+    }
+
+    @Override
+    public String toString(){
+        return "Dog " + this.getName() + " : Weight = " + this.getWeight();
     }
 
 }

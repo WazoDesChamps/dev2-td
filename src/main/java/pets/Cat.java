@@ -58,4 +58,9 @@ public class Cat extends Animal{
             return "MEEOW";
         }
     }
+
+    @Override
+    public String toString(){
+        return "Cat " + this.getName() + " : Weight = " + this.getWeight();
+    }
 }

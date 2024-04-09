@@ -1,4 +1,4 @@
-package Intro;
+package Phone;
 
 public class Contact {
     private String name;
@@ -68,8 +68,6 @@ public class Contact {
         }
         this.phone = phone;
     }
-
-
 
     public static int count_number(int x){
         int cpt = 0;

@@ -1,4 +1,4 @@
-package Intro;
+package Phone;
 
 public class Autre{
     public static void main (String[] args){

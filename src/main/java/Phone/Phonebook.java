@@ -38,7 +38,7 @@ public class Phonebook {
         }
     }
 
-    public void becomeProfessionel(Contact c, String companyAdress, String, String companyName, int companyPhone) throws Exception {
+    public void becomeProfessionel(Contact c, String companyAdress, String companyName, int companyPhone) throws Exception {
         if (c == null){
             throw new Exception("Le contact n'existe pas");
         }else{
